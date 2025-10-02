@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InternBridge - Smart Internship Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span>InternBridge</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#recommendations" class="nav-link">AI Recommendations</a></li>
+                <li><a href="#marketplace" class="nav-link">Marketplace</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#courses" class="nav-link">Bridge Courses</a></li>
+                <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Global Background Shapes -->
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <!-- Main Content Section -->
+            <div class="hero-main">
+                <div class="hero-left">
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>India's #1 Internship Platform</span>
+                    </div>
+                    <h1>Transform Your Career with <span class="text-gradient">AI-Powered</span> Internships</h1>
+                    <p class="hero-description">Connect with top companies, get AI recommendations, and earn blockchain certificates.</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">
+                            <i class="fas fa-rocket"></i>
+                            Start Your Journey
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-right">
+                    <div class="hero-visual-grid">
+                        <div class="feature-card">
+                            <div class="card-icon ai-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>AI Matching</h4>
+                            <div class="progress-mini">
+                                <div class="progress-fill-mini" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="card-icon blockchain-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h4>Blockchain Verified</h4>
+                            <div class="verified-badge">
+                                <i class="fas fa-check"></i>
+                                <span>Verified</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="card-icon skill-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Skill Bridge</h4>
+                            <div class="skill-tags-mini">
+                                <span class="skill-tag-mini">React</span>
+                                <span class="skill-tag-mini">Python</span>
+                            </div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="card-icon marketplace-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <h4>Marketplace</h4>
+                            <div class="gig-indicator">
+                                <span>500+ Gigs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="hero-bottom">
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Students</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success</span>
+                    </div>
+                </div>
+                
+                <div class="hero-features">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Free to Join</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-star"></i>
+                        <span>Top Rated</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Recommendations Section -->
+    <section id="recommendations" class="recommendations">
+        <div class="container">
+            <h2>AI-Powered Internship Recommendations</h2>
+            <div class="recommendation-container">
+                <div class="student-profile">
+                    <h3>Build Your Profile</h3>
+                    <form class="profile-form">
+                        <div class="form-group">
+                            <label for="course">Course</label>
+                            <select id="course" name="course">
+                                <option value="">Select Course</option>
+                                <option value="bsc-cs">B.Sc. Computer Science</option>
+                                <option value="btech-it">B.Tech IT</option>
+                                <option value="bca">BCA</option>
+                                <option value="mca">MCA</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="skills">Skills</label>
+                            <div class="skills-input">
+                                <input type="text" id="skills" placeholder="Type skills and press Enter">
+                                <div class="skills-tags" id="skillsTags"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="interests">Interests</label>
+                            <textarea id="interests" rows="3" placeholder="Describe your interests..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Get Recommendations</button>
+                    </form>
+                </div>
+                <div class="recommendations-display">
+                    <h3>Recommended Internships</h3>
+                    <div class="recommendation-cards" id="recommendationCards">
+                        <div class="recommendation-card">
+                            <div class="card-header">
+                                <h4>ML Engineer Intern</h4>
+                                <span class="match-score">95% Match</span>
+                            </div>
+                            <p><strong>Company:</strong> TechCorp Solutions</p>
+                            <p><strong>Duration:</strong> 3 months</p>
+                            <div class="required-skills">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Machine Learning</span>
+                                <span class="skill-tag">Data Analysis</span>
+                            </div>
+                            <button class="btn btn-outline">Apply Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blockchain Certificate Verification -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2>Blockchain Certificate Verification</h2>
+            <div class="certificate-container">
+                <div class="certificate-verify">
+                    <h3>Verify Certificate</h3>
+                    <div class="verify-form">
+                        <input type="text" placeholder="Enter Certificate ID" class="cert-input">
+                        <button class="btn btn-primary">Verify</button>
+                    </div>
+                    <div class="verification-result" id="verificationResult">
+                        <div class="result-card verified">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Certificate Verified</h4>
+                            <p><strong>Student:</strong> John Doe</p>
+                            <p><strong>Company:</strong> Tech Solutions Inc.</p>
+                            <p><strong>Duration:</strong> June 2024 - August 2024</p>
+                            <p><strong>Blockchain Hash:</strong> 0x1a2b3c4d...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="certificate-features">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Tamper-Proof</h4>
+                        <p>Stored on blockchain for maximum security</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-globe"></i>
+                        <h4>Global Verification</h4>
+                        <p>Verify from anywhere in the world</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-clock"></i>
+                        <h4>Instant Results</h4>
+                        <p>Get verification results in seconds</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mentorship Dashboard -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2>Faculty Dashboard</h2>
+            <div class="dashboard-stats">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div>
+                        <h3>45</h3>
+                        <p>Active Interns</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div>
+                        <h3>78%</h3>
+                        <p>Completion Rate</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-certificate"></i>
+                    <div>
+                        <h3>32</h3>
+                        <p>Certificates Issued</p>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <div class="student-tracking">
+                    <h3>Student Progress Tracking</h3>
+                    <div class="student-list">
+                        <div class="student-item">
+                            <div class="student-info">
+                                <img src="https://via.placeholder.com/40" alt="Student">
+                                <div>
+                                    <h4>Priya Sharma</h4>
+                                    <p>Data Science Intern</p>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%;"></div>
+                            </div>
+                            <div class="student-status active">Active</div>
+                        </div>
+                        <div class="student-item">
+                            <div class="student-info">
+                                <img src="https://via.placeholder.com/40" alt="Student">
+                                <div>
+                                    <h4>Rahul Kumar</h4>
+                                    <p>Web Development Intern</p>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%;"></div>
+                            </div>
+                            <div class="student-status active">Active</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mentor-remarks">
+                    <h3>Industry Mentor Feedback</h3>
+                    <div class="remark-card">
+                        <div class="remark-header">
+                            <strong>Mentor: Dr. Sarah Wilson</strong>
+                            <span class="remark-date">Today, 2:30 PM</span>
+                        </div>
+                        <p>Priya showed excellent analytical skills in today's data mining session. Recommend advancing to next module.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internship Marketplace -->
+    <section id="marketplace" class="marketplace">
+        <div class="container">
+            <h2>Internship Marketplace</h2>
+            <div class="marketplace-filters">
+                <select class="filter-select">
+                    <option>All Categories</option>
+                    <option>Technology</option>
+                    <option>Marketing</option>
+                    <option>Design</option>
+                </select>
+                <select class="filter-select">
+                    <option>All Durations</option>
+                    <option>Short Gigs (1-4 weeks)</option>
+                    <option>Medium (1-3 months)</option>
+                    <option>Long term (3+ months)</option>
+                </select>
+            </div>
+            <div class="marketplace-grid">
+                <div class="marketplace-card">
+                    <div class="card-header">
+                        <h4>UI/UX Design Sprint</h4>
+                        <span class="gig-type">Short Gig</span>
+                    </div>
+                    <p><strong>Company:</strong> Design Studio Pro</p>
+                    <p><strong>Duration:</strong> 2 weeks</p>
+                    <p><strong>Coins Reward:</strong> 150 points</p>
+                    <div class="gig-skills">
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Prototyping</span>
+                    </div>
+                    <button class="btn btn-primary">Apply Now</button>
+                </div>
+                <div class="marketplace-card">
+                    <div class="card-header">
+                        <h4>Python Automation Task</h4>
+                        <span class="gig-type">Micro Gig</span>
+                    </div>
+                    <p><strong>Company:</strong> AutoTech Solutions</p>
+                    <p><strong>Duration:</strong> 1 week</p>
+                    <p><strong>Coins Reward:</strong> 75 points</p>
+                    <div class="gig-skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Selenium</span>
+                    </div>
+                    <button class="btn btn-primary">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bridge Courses -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <h2>Skill Bridge Courses</h2>
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Resume Writing 101</h3>
+                    <p>Learn to create compelling resumes that get noticed</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 20 min</span>
+                        <span><i class="fas fa-star"></i> 4.8</span>
+                    </div>
+                    <button class="btn btn-outline">Start Course</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Professional Communication</h3>
+                    <p>Master the art of internship emails and networking</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 15 min</span>
+                        <span><i class="fas fa-star"></i> 4.9</span>
+                    </div>
+                    <button class="btn btn-outline">Start Course</button>
+                </div>
+                <div class="course-card">
+                    <div class="course-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Excel for Interns</h3>
+                    <p>Essential Excel skills every intern should know</p>
+                    <div class="course-meta">
+                        <span><i class="fas fa-clock"></i> 25 min</span>
+                        <span><i class="fas fa-star"></i> 4.7</span>
+                    </div>
+                    <button class="btn btn-outline">Start Course</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>InternBridge</h3>
+                    <p>Connecting students with meaningful internship opportunities through AI and blockchain technology.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li>AI Recommendations</li>
+                        <li>Blockchain Certificates</li>
+                        <li>Mentorship Dashboard</li>
+                        <li>Skill Courses</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@internbridge.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 InternBridge. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
